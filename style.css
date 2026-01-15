@@ -28,6 +28,12 @@ body {
   color: var(--text-dark);
   line-height: 1.7;
 }
+.main-nav a.active {
+  background-color: #5a3e2b;
+  color: #fff;
+  padding: 6px 14px;
+  border-radius: 20px;
+}
 
 /* حاوية عامة */
 .container {
@@ -339,3 +345,4 @@ body {
   }
 
 }
+
