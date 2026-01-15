@@ -1,3 +1,20 @@
+/* ========================
+   لوحة الألوان (خشب + شجر)
+======================== */
+:root {
+  --wood-dark: #4a2f1b;
+  --wood-medium: #8b5a2b;
+  --wood-light: #f5f1ea;
+
+  --green-olive: #6b8e23;
+  --green-dark: #3f5f3f;
+
+  --gold-soft: #c9a24d;
+
+  --text-dark: #2e2e2e;
+  --text-light: #ffffff;
+}
+
 /* إعدادات عامة */
 * {
   margin: 0;
@@ -7,13 +24,9 @@
 }
 
 body {
-  background-color: #f5f3ef;
-  color: #2e2e2e;
-  border: 4px solid brown;
+  background-color: var(--wood-light);
+  color: var(--text-dark);
   line-height: 1.7;
-}
-.product-card {
-  padding-bottom: 10px;
 }
 
 /* حاوية عامة */
@@ -23,17 +36,19 @@ body {
   margin: auto;
 }
 
-/* الهيدر */
+/* ========================
+   الهيدر
+======================== */
 .main-header {
   background-color: #ffffff;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 3px solid var(--wood-medium);
   padding: 15px 0;
 }
 
 .logo {
   font-size: 24px;
   font-weight: bold;
-  color: #5a3e2b;
+  color: var(--wood-dark);
 }
 
 .main-header .container {
@@ -41,94 +56,108 @@ body {
   justify-content: space-between;
   align-items: center;
 }
-
 .main-nav a {
+  display: inline-block;
+  padding: 8px 16px;
+  margin-left: 10px;
   text-decoration: none;
-  margin-left: 20px;
-  color: #2e2e2e;
   font-weight: 500;
+  color: var(--wood-dark);
+  border-radius: 20px;
+  transition: 
+    background-color 0.3s,
+    color 0.3s,
+    box-shadow 0.3s;
 }
 
 .main-nav a:hover {
-  color: #5a3e2b;
+  background-color: var(--wood-light);
+  color: var(--green-dark);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+.main-nav a:active {
+  transform: scale(0.97);
 }
 
-/* القسم الرئيسي */
+
+/* ========================
+   القسم الرئيسي (Hero)
+======================== */
 .hero {
-  background-color: #04ff5c45;
+  background: linear-gradient(
+    135deg,
+    var(--wood-light),
+    #e6dccb
+  );
   padding: 80px 0;
   text-align: center;
 }
 
-.hero .container{
-  background-color: #96570fb3;
-    border-radius: 10px ;
+.hero .container {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  padding: 40px 20px;
 }
 
 .hero h2 {
   font-size: 32px;
   margin-bottom: 15px;
-  color: #3b2a1a;
+  color: var(--wood-dark);
 }
 
 .hero p {
   font-size: 18px;
   margin-bottom: 30px;
-  color: #4a4a4a;
+  color: #555;
 }
 
-/* زر */
+/* ========================
+   زر
+======================== */
 .btn {
   display: inline-block;
-  background-color: #25D366; /* لون واتساب */
+  background-color: var(--green-dark);
   color: white;
   text-decoration: none;
   padding: 12px 25px;
-  border-radius: 5px;
+  border-radius: 6px;
   font-weight: bold;
   transition: background-color 0.3s, transform 0.3s;
 }
 
 .btn:hover {
-  background-color: #1ebe57;
+  background-color: var(--green-olive);
   transform: translateY(-2px);
 }
 
-
-/* الفوتر */
-.main-footer {
-  background-color: #ffffff;
-  border-top: 1px solid #ddd;
-  text-align: center;
-  padding: 15px 0;
-  margin-top: 50px;
-  font-size: 14px;
-}
-
-/* عنوان الصفحة */
+/* ========================
+   عنوان الصفحة
+======================== */
 .page-title {
-    background-color: #04ff5c45;
-
+  background-color: #efe6d6;
   padding: 50px 0;
   text-align: center;
 }
 
-.page-title .container{
-  background-color: #96570fbf;
-  border-radius: 10px ;
+.page-title .container {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 30px 20px;
 }
 
 .page-title h2 {
   font-size: 28px;
-  color: #3b2a1a;
+  color: var(--wood-dark);
   margin-bottom: 10px;
 }
 
 .page-title p {
-  color: #555;
+  color: #666;
 }
 
-/* شبكة المنتجات */
+/* ========================
+   شبكة المنتجات
+======================== */
 .products-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -136,70 +165,62 @@ body {
   margin-top: 40px;
 }
 
-/* .product-card img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-  border-radius: 5px;
-} */
-
-
 /* كرت المنتج */
 .product-card {
-  background-color: #ffffff;
-  border-radius: 8px;
-  overflow: hidden;
+  background: #f5f0e8; /* لون خشبي دافئ */
+  border-radius: 16px;
+  padding: 14px;
   text-align: center;
-  transition: transform 0.3s, box-shadow 0.3s;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-}
-
-.product-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.08);
 }
 
 .product-card img {
   width: 100%;
-  height: 300px; /* زيادة الارتفاع */
-  object-fit: cover;
-  border-bottom: 1px solid #ddd;
-  border-radius: 5px 5px 0 0;
-  transition: transform 0.3s;
-}
-
-.product-card img:hover {
-  transform: scale(1.05);
+  height: auto;
+  border-radius: 12px;
+  margin-bottom: 10px;
 }
 
 
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 28px rgba(0,0,0,0.15);
+}
 
-/* .product-card img {
-  width: 100%;
-  height: 65%;
-  object-fit: cover;
-} */
+
 
 .product-card h3 {
   font-size: 20px;
   margin: 15px 0 5px;
-  color: #3b2a1a;
+  color: var(--wood-dark);
 }
 
 .product-card p {
   font-size: 14px;
-  color: #555;
+  color: #666;
   padding: 0 10px 15px;
 }
 
 .product-card .price {
   font-weight: bold;
-  color: #5a3e2b;
+  color: var(--gold-soft);
   margin-bottom: 15px;
+}
+.product-card .btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 14px;
+  background: linear-gradient(135deg, #7a4a24, #a06b3b);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 20px;
+  font-size: 14px;
 }
 
 
-/* تفاصيل المنتج */
+/* ========================
+   تفاصيل المنتج
+======================== */
 .product-details {
   padding: 60px 0;
 }
@@ -214,23 +235,20 @@ body {
 .details-image {
   background-color: #ffffff;
   padding: 20px;
-  border: 1px solid #ddd;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
 }
 
 .details-image img {
   width: 100%;
   max-height: 450px;
   object-fit: contain;
-  display: block;
-  margin: auto;
 }
-
 
 .details-info h2 {
   font-size: 28px;
   margin-bottom: 15px;
-  color: #3b2a1a;
+  color: var(--wood-dark);
 }
 
 .details-info p {
@@ -239,16 +257,27 @@ body {
 }
 
 .details-info .price {
-  font-size: 20px;
+  font-size: 22px;
   font-weight: bold;
-  margin-bottom: 25px;
+  color: var(--gold-soft);
 }
 
-.products {
-  padding: 40px 0;
+/* ========================
+   الفوتر
+======================== */
+.main-footer {
+  background-color: #ffffff;
+  border-top: 3px solid var(--wood-medium);
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 50px;
+  font-size: 14px;
+  color: #666;
 }
 
-/* استايلات الموبايل */
+/* ========================
+   الموبايل
+======================== */
 @media (max-width: 768px) {
 
   .container {
@@ -271,13 +300,23 @@ body {
     grid-template-columns: 1fr;
   }
 
-  .details-image img {
-    max-height: 450px;
+  .products-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+.products-grid {
+    grid-template-columns: repeat(2, 1fr); /* صفّين على الهاتف */
+    gap: 16px;
+  }
+  .product-card img {
+    height: 220px;
+  }
+   .product-card h3 {
+    font-size: 15px;
   }
 
-  .btn {
-    padding: 10px 20px;
-    font-size: 16px;
+  .product-card p {
+    font-size: 13px;
   }
 
   .main-header .container {
@@ -285,24 +324,18 @@ body {
     align-items: flex-start;
   }
 
+  .main-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
   .main-nav a {
-    display: block;
-    margin: 6px 0;
-    font-size: 16px;
-  }
-
-  .products-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-
-  .product-card img {
-    height: 400px;
-  }
-
-  .product-card h3 {
-    font-size: 18px;
+    font-size: 14px;          /* أصغر */
+    padding: 6px 12px;        /* أنحف */
+    border-radius: 16px;      /* أنعم */
+    background-color: #f2e8dc;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
   }
 
 }
-
