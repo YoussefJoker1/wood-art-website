@@ -3,56 +3,56 @@ const products = [
     id: 1,
     name: "ساعة خشبية فنية",
     price: "150$",
-    image: "images/products/table.png",
+    image: "table.png",
     description: "طاولة مصنوعة يدويًا من خشب طبيعي عالي الجودة"
   },
   {
     id: 2,
     name: "ساعة خشبية فنية",
     price: "60$",
-    image: "images/products/shelf.png",
+    image: "shelf.png",
     description: "رف أنيق مناسب للديكور العصري"
   },
   {
     id: 3,
     name: "ساعة خشبية فنية",
     price: "80$",
-    image: "images/products/art.png",
+    image: "art.png",
     description: "قطعة فنية تضيف لمسة دافئة للمكان"
   },
   {
     id: 4,
     name: "انارة فنية",
     price: "80$",
-    image: "images/products/lamp1.png",
+    image: "lamp1.png",
     description: "قطعة فنية تضيف لمسة دافئة للمكان"
   },
   {
     id: 5,
     name: "انارة فنية",
     price: "80$",
-    image: "images/products/lamp2.png",
+    image: "lamp2.png",
     description: "قطعة فنية تضيف لمسة دافئة للمكان"
   },
   {
     id: 6,
     name: "انارة فنية",
     price: "80$",
-    image: "images/products/lamp3.png",
+    image: "lamp3.png",
     description: "قطعة فنية تضيف لمسة دافئة للمكان"
   },
   {
     id: 7,
     name: "ستاند اغراض شخصية مميزة",
     price: "80$",
-    image: "images/products/stand1.png",
+    image: "stand1.png",
     description: "قطعة فنية تضيف لمسة دافئة للمكان"
   },
   {
     id: 8,
     name: "لوحة فنية خشبية",
     price: "80$",
-    image: "images/products/stand2.png",
+    image: "stand2.png",
     description: "قطعة فنية تضيف لمسة دافئة للمكان"
   }
 ];
@@ -75,5 +75,6 @@ if (productsList) {
     productsList.appendChild(productCard);
   });
 }
+
 
 
