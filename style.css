@@ -28,12 +28,6 @@ body {
   color: var(--text-dark);
   line-height: 1.7;
 }
-.main-nav a.active {
-  background-color: #5a3e2b;
-  color: #fff;
-  padding: 6px 14px;
-  border-radius: 20px;
-}
 
 /* حاوية عامة */
 .container {
@@ -42,6 +36,13 @@ body {
   margin: auto;
 }
 
+
+
+.main-nav a.active {
+  background-color: #5a3e2b;   /* لون خشبي غامق */
+  color: #ffffff;
+  font-weight: 600;
+}
 /* ========================
    الهيدر
 ======================== */
@@ -81,9 +82,9 @@ body {
   color: var(--green-dark);
   box-shadow: 0 4px 10px rgba(0,0,0,0.08);
 }
-/* .main-nav a:active {
+.main-nav a:active {
   transform: scale(0.97);
-} */
+}
 
 
 /* ========================
@@ -245,11 +246,7 @@ body {
   box-shadow: 0 8px 20px rgba(0,0,0,0.08);
 }
 
-.details-image img {
-  width: 100%;
-  max-height: 450px;
-  object-fit: contain;
-}
+
 
 .details-info h2 {
   font-size: 28px;
@@ -320,11 +317,29 @@ body {
    .product-card h3 {
     font-size: 15px;
   }
+  .main-nav a.active {
+    background-color: #4a2f1b;
+  }
 
   .product-card p {
     font-size: 13px;
   }
+  .details-grid {
+    gap: 25px;
+  }
 
+  .details-info h2 {
+    font-size: 22px;
+  }
+
+  .price-box strong {
+    font-size: 20px;
+  }
+
+  .btn.whatsapp {
+    width: 100%;
+    justify-content: center;
+  }
   .main-header .container {
     flex-direction: column;
     align-items: flex-start;
@@ -346,4 +361,75 @@ body {
 
 }
 
+
+.fade-in {
+  animation: fadeUp 0.8s ease forwards;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.image-frame {
+  background: linear-gradient(135deg, #efe6d8, #d9c2a3);
+  padding: 15px;
+  border-radius: 18px;
+}
+
+.details-image img {
+  border-radius: 14px;
+  width: 100%;
+  transition: transform 0.4s ease;
+}
+
+.details-image img:hover {
+  transform: scale(1.04);
+}
+.badge {
+  display: inline-block;
+  background-color: #6b4a2d;
+  color: #fff;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+.price-box {
+  background-color: #f3eee8;
+  padding: 15px;
+  border-radius: 12px;
+  margin: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price-box span {
+  color: #6b6b6b;
+  font-size: 14px;
+}
+
+.price-box strong {
+  font-size: 22px;
+  color: #5a3e2b;
+}
+.btn.whatsapp {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(135deg, #25D366, #1ebe57);
+  padding: 14px 28px;
+  border-radius: 30px;
+  font-size: 16px;
+}
+
+.btn.whatsapp:hover {
+  transform: translateY(-2px) scale(1.02);
+}
 
